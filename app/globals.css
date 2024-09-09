@@ -66,4 +66,9 @@ body {
     background: linear-gradient(145deg, #e0e0e0, #f2f2f2);
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
+
+  .bg-home {
+    background: linear-gradient(145deg, #e8e8e8, #ffffff);
+    box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
+  }
 }

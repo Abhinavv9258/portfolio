@@ -13,8 +13,24 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        bounce: 'bounce-custom 2s infinite',
+      },
+      keyframes: {
+        'bounce-custom': {
+          '0%, 100%': {
+            transform: 'translateY(15px)',
+            opacity: '1',
+          },
+          '50%': {
+            transform: 'translateY(-15px)',
+            opacity: '0',
+          },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
