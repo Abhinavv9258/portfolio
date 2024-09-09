@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <>
             <section className="bg-home py-20 text-center px-0 md:px-16 md:h-[90vh]">
                 <div className="mx-auto max-w-7xl text-center py-20">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">HEY, I'M ABHINAV VERMA</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">HEY, I&apos;M ABHINAV VERMA</h1>
                     <p className="mt-12 text-gray-600 text-lg md:text-xl px-10 md:px-35 lg:px-40">
                         Dedicated to building and managing robust websites and web applications that drive success and elevate your digital presence to new heights.
                     </p>
