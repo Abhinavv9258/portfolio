@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
+import Footer from "../components/Footer";
 
 import github from "../assets/images/github.png"
 import leetcode from "../assets/images/leetcode.png"
@@ -40,6 +41,7 @@ export default function page() {
             </aside>
             <Navbar />
             <Home />
+            <Footer />
         </>
     );
 }
