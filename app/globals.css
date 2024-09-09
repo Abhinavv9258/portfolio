@@ -2,32 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define CSS variables for foreground and background colors */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --box-shadow-light: 8px 8px 16px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: -8px -8px 16px rgba(255, 255, 255, 0.7);
 }
 
+/* Define CSS variables for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 24, 24, 24;
+    --background-end-rgb: 48, 48, 48;
+    --box-shadow-light: 8px 8px 16px rgba(0, 0, 0, 0.3);
+    --box-shadow-dark: -8px -8px 16px rgba(0, 0, 0, 0.3);
   }
+}
+
+/* Hiding scrollbar */
+html,
+body {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+  box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .shadow-neumorphism,
+  .shadow-neumorphism-inset {
+    box-shadow: 8px 8px 16px #c5c6c7, -8px -8px 16px #ffffff;
+  }
+
+  .bg-neumorphism {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
+  }
+
+  .bg-neumorphism-dark {
+    background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+    box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
+  }
+
+  .bg-navbar {
+    background: linear-gradient(145deg, #e0e0e0, #f2f2f2);
+    box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
 }
