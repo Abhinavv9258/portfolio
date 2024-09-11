@@ -72,6 +72,11 @@ body {
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
 
+  .bg-about {
+    background: linear-gradient(145deg, #252525, #3a3a3a);
+    box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
+  }
+
   .bg-footer {
     background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
