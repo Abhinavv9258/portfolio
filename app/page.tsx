@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 import AboutMe from "../components/AboutMe";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 import Footer from "../components/Footer";
 
 import github from "../assets/images/github.png"
@@ -43,6 +45,8 @@ export default function page() {
             <Navbar />
             <Home />
             <AboutMe />
+            <Projects />
+            <ContactMe />
             <Footer />
         </>
     );
