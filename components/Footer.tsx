@@ -8,6 +8,7 @@ import linkdin from "../assets/images/linkdin.png";
 import cv from "../assets/images/cv.png";
 
 const Footer: React.FC = () => {
+
     return (
         <footer className="bg-footer py-8 text-center px-10 md:px-10" style={{ width: '100%' }}>
             <div className="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8 flex flex-col-reverse md:flex-row justify-between">
@@ -19,18 +20,18 @@ const Footer: React.FC = () => {
                 </div>
 
                 <div className="text-left md:text-center" style={{ width: '100%' }}>
-                    <h3 className="text-lg font-semibold text-gray-100">SOCIAL</h3>
+                    <h3 className="text-xl font-semibold text-gray-100">SOCIAL</h3>
                     <div className="flex justify-start md:justify-center space-x-4 mt-4 mb-4">
-                        <a href="https://www.linkedin.com/in/yourprofile" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/abhinav-verma-774349200/" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={linkdin} alt="LinkedIn" className="h-5 w-5" />
                         </a>
-                        <a href="https://github.com/yourprofile" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/Abhinavv9258" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={github} alt="GitHub" className="h-5 w-5" />
                         </a>
-                        <a href="https://leetcode.com/yourprofile" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
+                        <a href="https://leetcode.com/u/Abhinavv9258/" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={leetcode} alt="Leetcode" className="h-5 w-5" />
                         </a>
-                        <a href="/cv" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1jfStsz96nlhoMxVS4aQiK1fER1mI3qzy/view?usp=sharing" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={cv} alt="CV" className="h-5 w-5" />
                         </a>
                     </div>
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
 
             <div className="mx-auto max-w-7xl px-2 sm:px-8 lg:px-8 text-center text-gray-500 mt-8">
                 &copy;2024. Made by{" "}
-                <a href="#" className="text-gray-100 font-semibold hover:underline hover:text-purple-400">Abhinav Verma</a>
+                <a href="/" className="text-gray-100 font-semibold hover:underline hover:text-purple-400">Abhinav Verma</a>
                 <br />Loosely designed and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Vercel.
             </div>
         </footer>

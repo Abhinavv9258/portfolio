@@ -1,14 +1,32 @@
 "use client";
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
+
 import React, { useState } from "react";
+
 import profile from '../assets/images/profile.jpg';
 
 const Navbar: React.FC = () => {
+    const router = useRouter();
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobileOpen(!mobileOpen);
     };
+
+    const handleMobileMenuClick = (id: string) => {
+        scrollToSection(id);
+        toggleMobileMenu();
+    };
+
+    const scrollToSection = (id: string) => {
+        document.querySelector(`#${id}`)?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const navigate = () => {
+        window.location.reload();
+        router.replace('/');
+    }
 
     return (
         <>
@@ -20,17 +38,18 @@ const Navbar: React.FC = () => {
                                 <Image
                                     src={profile}
                                     alt="Profile"
+                                    onClick={navigate}
                                     className="rounded-full"
                                 />
                             </div>
-                            <span className="text-lg font-semibold hover:text-purple-500 cursor-pointer uppercase text-gray-800">Abhinav Verma</span>
+                            <span className="text-lg font-semibold hover:text-purple-500 cursor-pointer uppercase text-gray-800" onClick={navigate}>Abhinav Verma</span>
                         </div>
 
                         <div className="hidden md:flex space-x-8">
-                            <a href="#" className="text-gray-800 font-semibold hover:text-purple-500">Home</a>
-                            <a href="#" className="text-gray-800 font-semibold hover:text-purple-500">About</a>
-                            <a href="#" className="text-gray-800 font-semibold hover:text-purple-500">Projects</a>
-                            <a href="#" className="text-gray-800 font-semibold hover:text-purple-500">Contact</a>
+                            <a className="text-gray-800 font-semibold hover:text-purple-500 cursor-pointer" onClick={() => scrollToSection('home')}>Home</a>
+                            <a className="text-gray-800 font-semibold hover:text-purple-500 cursor-pointer" onClick={() => scrollToSection('about')}>About</a>
+                            <a className="text-gray-800 font-semibold hover:text-purple-500 cursor-pointer" onClick={() => scrollToSection('projects')}>Projects</a>
+                            <a className="text-gray-800 font-semibold hover:text-purple-500 cursor-pointer" onClick={() => scrollToSection('contact')}>Contact</a>
                         </div>
 
                         <div className="md:hidden">
@@ -62,10 +81,10 @@ const Navbar: React.FC = () => {
                 {mobileOpen && (
                     <div className="md:hidden absolute top-full left-0 right-0 bg-gray-100 shadow-lg">
                         <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                            <a href="#" onClick={toggleMobileMenu} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium">Home</a>
-                            <a href="#" onClick={toggleMobileMenu} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium">About</a>
-                            <a href="#" onClick={toggleMobileMenu} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium">Projects</a>
-                            <a href="#" onClick={toggleMobileMenu} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                            <a onClick={() => handleMobileMenuClick('home')} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium cursor-pointer">Home</a>
+                            <a onClick={() => handleMobileMenuClick('about')} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium cursor-pointer">About</a>
+                            <a onClick={() => handleMobileMenuClick('projects')} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium cursor-pointer">Projects</a>
+                            <a onClick={() => handleMobileMenuClick('contact')} className="block text-gray-800 hover:bg-gray-200 hover:text-purple-500 px-3 py-2 rounded-md text-base font-medium cursor-pointer">Contact</a>
                         </div>
                     </div>
                 )}

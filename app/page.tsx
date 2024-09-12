@@ -16,6 +16,11 @@ import cv from "../assets/images/cv.png"
 
 
 export default function page() {
+
+    const handleClick = (url: string) => {
+        window.open(url, '_blank');
+    };
+
     return (
         <>
             <aside className="hidden md:flex flex-col justify-center fixed left-0 top-0 bottom-0 w-14">
@@ -23,22 +28,26 @@ export default function page() {
                     <Image
                         src={github}
                         alt="Github"
-                        className="w-14 hover:bg-purple-200 p-2 rounded"
+                        onClick={() => handleClick('https://github.com/Abhinavv9258')}
+                        className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                     <Image
                         src={linkdin}
                         alt="LinkdIn"
-                        className="w-14 hover:bg-purple-200 p-2 rounded"
+                        onClick={() => handleClick('https://www.linkedin.com/in/abhinav-verma-774349200/')}
+                        className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                     <Image
                         src={leetcode}
                         alt="LeetCode"
-                        className="w-14 hover:bg-purple-200 p-2 rounded"
+                        onClick={() => handleClick('https://www.linkedin.com/in/abhinav-verma-774349200/')}
+                        className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                     <Image
                         src={cv}
                         alt="CV"
-                        className="w-14 hover:bg-purple-200 p-2 rounded"
+                        onClick={() => handleClick('https://drive.google.com/file/d/1jfStsz96nlhoMxVS4aQiK1fER1mI3qzy/view?usp=sharing')}
+                        className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                 </div>
             </aside>
