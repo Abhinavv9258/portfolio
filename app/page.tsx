@@ -40,7 +40,7 @@ export default function page() {
                     <Image
                         src={leetcode}
                         alt="LeetCode"
-                        onClick={() => handleClick('https://www.linkedin.com/in/abhinav-verma-774349200/')}
+                        onClick={() => handleClick('https://leetcode.com/u/Abhinavv9258/')}
                         className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                     <Image
