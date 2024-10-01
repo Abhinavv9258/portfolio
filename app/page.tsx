@@ -47,7 +47,7 @@ export default function page() {
                     <Image
                         src={cv}
                         alt="CV"
-                        onClick={() => handleClick('https://drive.google.com/file/d/1jfStsz96nlhoMxVS4aQiK1fER1mI3qzy/view?usp=sharing')}
+                        onClick={() => handleClick('https://drive.google.com/file/d/1Y48tZyg2BAsFLi23eh67EQgq8-fK6j3i/view')}
                         className="w-14 hover:bg-purple-200 p-2 rounded cursor-pointer"
                     />
                 </div>
