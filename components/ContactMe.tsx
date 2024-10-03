@@ -85,7 +85,7 @@ const ContactMe = () => {
                 </p>
                 <div className='lg:ml-40 lg:mr-40 md:ml-30 md:mr-30 sm:ml-20 sm:mr-10 m-2'>
                     <div className="sm:col-span-4 mt-6">
-                        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-300">
+                        <label htmlFor="email" className="block font-medium leading-6 text-gray-300">
                             Name
                         </label>
                         <div className="mt-2">
@@ -96,12 +96,13 @@ const ContactMe = () => {
                                 autoComplete="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="bg-gray-600 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6"
+                                placeholder='Enter Your Name'
+                                className="bg-gray-600 block w-full rounded-md border-0 p-3 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-purple-500 sm:leading-6"
                             />
                         </div>
                     </div>
                     <div className="sm:col-span-4 mt-6">
-                        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-300">
+                        <label htmlFor="email" className="block font-medium leading-6 text-gray-300">
                             Email
                         </label>
                         <div className="mt-2">
@@ -112,12 +113,13 @@ const ContactMe = () => {
                                 autoComplete="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="bg-gray-600 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6"
+                                placeholder='Enter Your Email'
+                                className="bg-gray-600 block w-full rounded-md border-0 p-3 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-purple-500 sm:leading-6"
                             />
                         </div>
                     </div>
                     <div className="col-span-full mt-6">
-                        <label htmlFor="message" className="block text-sm font-medium leading-6 text-gray-300">
+                        <label htmlFor="message" className="block font-medium leading-6 text-gray-300">
                             Message
                         </label>
                         <div className="mt-2">
@@ -127,17 +129,19 @@ const ContactMe = () => {
                                 rows={3}
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="bg-gray-600 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-gray-400 sm:text-sm sm:leading-6"
+                                placeholder='Enter Your Message'
+                                className="bg-gray-600 block w-full rounded-md border-0 p-3 text-gray-200 shadow-sm ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:outline-none focus:ring-purple-500 sm:leading-6"
                             />
                         </div>
-                        <p className="mt-3 mb-3 text-sm leading-6 text-gray-500">Write your message here.</p>
                     </div>
-                    <button
-                        className="inline-block text-xl rounded hover:text-purple-500 bg-purple-500 hover:bg-gray-100 px-14 py-3 text-gray-100 font-semibold shadow-neumorphism-dark hover:shadow-neumorphism-dark transition-all duration-300"
-                        style={{ transitionDelay: '0.05s' }}
-                        onClick={formSubmit}>
-                        CONTACT
-                    </button>
+                    <div className=' mt-6 flex flex-row-reverse'>
+                        <button
+                            className="inline-block text-xl rounded hover:text-purple-500 bg-purple-500 hover:bg-gray-100 px-14 py-3 text-gray-100 font-semibold shadow-neumorphism-dark hover:shadow-neumorphism-dark transition-all duration-300 focus:outline-gray-400 outline-gray-400"
+                            style={{ transitionDelay: '0.05s' }}
+                            onClick={formSubmit}>
+                            CONTACT
+                        </button>
+                    </div>
                 </div>
             </div>
             <ToastContainer />

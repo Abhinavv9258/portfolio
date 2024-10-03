@@ -8,7 +8,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --box-shadow-light: 8px 8px 16px rgba(0, 0, 0, 0.1);
-  --box-shadow-dark: -8px -8px 16px rgba(255, 255, 255, 0.7);
+  --box-shadow-dark: -8px -8px 16px rgba(255, 255, 255, 0.1);
 }
 
 /* Define CSS variables for dark mode */
@@ -67,12 +67,14 @@ body {
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
 
-  .bg-home, .bg-projects {
+  .bg-home,
+  .bg-projects {
     background: linear-gradient(145deg, #e8e8e8, #ffffff);
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
 
-  .bg-about, .bg-contact {
+  .bg-about,
+  .bg-contact {
     background: linear-gradient(145deg, #252525, #3a3a3a);
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
   }
@@ -80,5 +82,15 @@ body {
   .bg-footer {
     background: linear-gradient(145deg, #1a1a1a, #2e2e2e);
     box-shadow: var(--box-shadow-light), var(--box-shadow-dark);
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(128, 90, 213, 0.5);
+  }
+
+  button:hover {
+    transform: translateY(-2px);
   }
 }
