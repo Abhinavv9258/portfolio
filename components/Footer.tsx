@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                         <a href="https://leetcode.com/u/Abhinavv9258/" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={leetcode} alt="Leetcode" className="h-5 w-5" />
                         </a>
-                        <a href="https://drive.google.com/file/d/1jfStsz96nlhoMxVS4aQiK1fER1mI3qzy/view?usp=sharing" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1Y48tZyg2BAsFLi23eh67EQgq8-fK6j3i/view" className="p-1 bg-gray-600 hover:bg-purple-400 rounded-full" target="_blank" rel="noopener noreferrer">
                             <Image src={cv} alt="CV" className="h-5 w-5" />
                         </a>
                     </div>
